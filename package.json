@@ -1,0 +1,14 @@
+{
+  "name": "ureactme-bootstrap-theme",
+  "version": "1.0.0",
+  "description": "An amazing Boostrap3 theme",
+  "scripts": {
+    "build": "node-sass -r stylesheets -o dist --include-path ./node_modules/bootstrap-sass/assets/stylesheets/"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "node-sass": "^4.1.1"
+  }
+}
