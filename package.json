@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "description": "An amazing Boostrap3 theme",
   "scripts": {
-    "build": "node-sass -r stylesheets -o dist --include-path ./node_modules/bootstrap-sass/assets/stylesheets/"
+    "prebuild-css": "mkdir -p dist/css",
+    "build-css": "node-sass -r stylesheets -o dist/css --include-path ./node_modules/bootstrap-sass/assets/stylesheets/",
+
+    "prebuild-js": "mkdir -p dist/js",
+    "build-js": "cp node_modules/bootstrap-sass/assets/javascripts/bootstrap.*js ./dist/js/",
+
+    "build": "npm run build-css && npm run build-js"
   },
   "author": "",
   "license": "ISC",
