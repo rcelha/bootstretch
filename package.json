@@ -5,16 +5,16 @@
   "scripts": {
     "prebuild-css": "mkdir -p dist/css",
     "build-css": "node-sass -r stylesheets -o dist/css --include-path ./node_modules/bootstrap-sass/assets/stylesheets/",
-
     "prebuild-js": "mkdir -p dist/js",
     "build-js": "cp node_modules/bootstrap-sass/assets/javascripts/bootstrap.*js ./dist/js/",
-
-    "build": "npm run build-css && npm run build-js"
+    "build": "npm run build-css && npm run build-js",
+    "watch": "nodemon -x \"npm run build\" -i dist -e js,css,scss,sass"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
-    "node-sass": "^4.1.1"
+    "node-sass": "^4.1.1",
+    "nodemon": "~1.11.0"
   }
 }
